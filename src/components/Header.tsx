@@ -10,10 +10,7 @@ import { Link } from "react-router-dom";
 import { Leaf, Users, Target, Heart } from "lucide-react";
 import { MobileNav } from "@/components/MobileNav";
 import { SocialIcons } from "@/components/SocialIcons";
-import image1 from "../assets/image.png";
-import image2 from "../assets/image1.png";
 import logo from "../assets/android-chrome-192x192.png";
-import NavBar from "@/components/NavBar";
 
 export default function Header () {
     return (

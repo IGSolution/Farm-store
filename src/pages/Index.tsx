@@ -6,6 +6,7 @@ import { Leaf, Users, ShoppingCart, TrendingUp, Star, ChevronRight } from 'lucid
 import { MobileNav } from '@/components/MobileNav';
 import { SocialIcons } from '@/components/SocialIcons';
 import logo from "../assets/android-chrome-192x192.png"
+import FAQ from '@/components/FAQ';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -230,6 +231,7 @@ const Index = () => {
         </div>
       </section>
 
+                  <FAQ/>
   
     </div>
   );

@@ -13,7 +13,8 @@ import { SocialIcons } from "@/components/SocialIcons";
 import image1 from "../assets/image.png";
 import image2 from "../assets/image1.png";
 import logo from "../assets/android-chrome-192x192.png";
-import NavBar from "@/components/NavBar";
+import FAQ from "@/components/FAQ";
+
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -150,6 +151,8 @@ const About = () => {
             </Link>
           </div>
         </div>
+
+        <FAQ/>
       </main>
 
     </div>
