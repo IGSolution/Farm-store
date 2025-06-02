@@ -159,7 +159,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-gray-900">Phone</h4>
                     <p className="text-gray-600">
-                      +234 (803) 966 8177, +234 (807) 792 0919
+                      +234 (803) 966 8177, <br />
+                      +234 (807) 792 0919
                     </p>
                     <p className="text-sm text-gray-500">Mon-Fri 8AM-6PM WAT</p>
                   </div>
@@ -169,7 +170,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-gray-600">rpkaneng@gmail.com</p>
+                    <p className="text-gray-600">krpkaneng@gmail.com</p>
                     <p className="text-sm text-gray-500">
                       We'll respond within 24 hours
                     </p>
@@ -192,6 +193,17 @@ const Contact = () => {
                   </div>
                 </div>
 
+                <div className="flex items-start space-x-3">
+                  <Clock className="h-5 w-5 text-green-600 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-gray-900">
+                      Delivery Hours
+                    </h4>
+                    <p className="text-gray-600">
+                      Wednesdays: 8:00 AM - 9:00 PM
+                    </p>
+                  </div>
+                </div>
                 <div className="pt-6 border-t">
                   <h4 className="font-medium text-gray-900 mb-3">Follow Us</h4>
                   <SocialIcons />
