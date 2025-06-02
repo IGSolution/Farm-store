@@ -39,8 +39,9 @@ function AppRoutes() {
       <Route path="/verify" element={<Verify />} />
       <Route path="/payment-success" element={<PaymentSuccess />} />
       
+      <Route path="/marketplace" element={<Marketplace />} />
+
       <Route element={<MainLayout />}>
-        <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
