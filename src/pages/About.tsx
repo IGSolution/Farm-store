@@ -182,7 +182,7 @@ const About = () => {
             Join Our Growing Community
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Let’s kick-start the year with healthy eating and very convenient
+            Kick-start the day with healthy eating and very convenient
             shopping from the comfort of your home or office!.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
