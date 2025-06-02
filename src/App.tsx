@@ -39,31 +39,26 @@ function AppRoutes() {
       <Route path="/verify" element={<Verify />} />
       <Route path="/payment-success" element={<PaymentSuccess />} />
       
-      {/* Public routes */}
-      <Route path="/" element={
-        <MainLayout>
-          <Routes>
-            <Route path="/marketplace" element={<Marketplace />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/" element={
-              user ? (
-                profile?.is_verified ? (
-                  profile.role === 'farmer' ? 
-                    <Navigate to="/dashboard" replace /> : 
-                    <Navigate to="/marketplace" replace />
-                ) : (
-                  <Navigate to="/verify" replace />
-                )
-              ) : (
-                <Index />
-              )
-            } />
-          </Routes>
-        </MainLayout>
-      } />
+      <Route element={<MainLayout />}>
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={
+          user ? (
+            profile?.is_verified ? (
+              profile.role === 'farmer' ? 
+                <Navigate to="/dashboard" replace /> : 
+                <Navigate to="/marketplace" replace />
+            ) : (
+              <Navigate to="/verify" replace />
+            )
+          ) : (
+            <Index />
+          )
+        } />
+      </Route>
       
       <Route path="/dashboard" element={
         <ProtectedRoute allowedRoles={['farmer']}>

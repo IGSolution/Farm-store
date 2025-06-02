@@ -9,45 +9,6 @@ import logo from "../assets/android-chrome-192x192.png"
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <Link to="/" className="flex items-center">
-              <img src={logo} alt="logo" className="h-8 w-8 text-green-600 mr-2" />
-              <h1 className="text-2xl font-bold text-gray-900">KRP Farm</h1>
-            </Link>
-            
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              <Link to="/marketplace" className="text-gray-500 hover:text-gray-900">
-                Marketplace
-              </Link>
-              <Link to="/about" className="text-gray-500 hover:text-gray-900">
-                About
-              </Link>
-             {/* <Link to="/blog" className="text-gray-500 hover:text-gray-900">
-                Blog
-              </Link>*/}
-              <Link to="/contact" className="text-gray-500 hover:text-gray-900">
-                Contact
-              </Link>
-            </nav>
-
-            <div className="hidden md:flex gap-2">
-              <Link to="/marketplace">
-                <Button variant="outline">Browse Marketplace</Button>
-              </Link>
-              <Link to="/auth">
-                <Button>Get Started</Button>
-              </Link>
-            </div>
-
-            {/* Mobile Navigation */}
-            <MobileNav />
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -269,82 +230,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <Link to="/" className="flex items-center">
-                <img src={logo} alt="logo" className="h-8 w-8 text-green-600" />
-                <span className="ml-2 text-xl font-bold text-white">KRP Farm</span>
-              </Link>
-              <p className="mt-4 text-gray-400 max-w-md">
-                Connecting Nigerian farmers with consumers for fresh, local produce delivery across major cities.
-              </p>
-              <div className="mt-6">
-                <SocialIcons />
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Quick Links
-              </h3>
-              <ul className="mt-4 space-y-4">
-                <li>
-                  <Link to="/marketplace" className="text-gray-300 hover:text-white">
-                    Marketplace
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="text-gray-300 hover:text-white">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="text-gray-300 hover:text-white">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-gray-300 hover:text-white">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Support
-              </h3>
-              <ul className="mt-4 space-y-4">
-                <li>
-                  <Link to="/auth" className="text-gray-300 hover:text-white">
-                    Sign Up
-                  </Link>
-                </li>
-                <li>
-                  <a href="mailto:support@farmstore.ng" className="text-gray-300 hover:text-white">
-                    Help Center
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+2348000000000" className="text-gray-300 hover:text-white">
-                    Call Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-8 border-t border-gray-800 pt-8">
-            <p className="text-center text-gray-400">
-               &copy; 2025 KRP FARM.
-            </p>
-          </div>
-        </div>
-      </footer>
+  
     </div>
   );
 };

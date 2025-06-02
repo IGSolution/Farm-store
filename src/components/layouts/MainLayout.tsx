@@ -1,11 +1,14 @@
 // src/components/layouts/MainLayout.jsx
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Outlet } from "react-router-dom";
 
-const MainLayout = ({ children }) => (
+const MainLayout = () => (
   <>
     <Header />
-    <main className="min-h-screen">{children}</main>
+    <main className="min-h-screen">
+    <Outlet />
+    </main>
     <Footer />
   </>
 );
