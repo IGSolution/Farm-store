@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Leaf, Users, ShoppingCart, TrendingUp, Star, ChevronRight } from 'lucide-react';
-import { MobileNav } from '@/components/MobileNav';
-import { SocialIcons } from '@/components/SocialIcons';
-import logo from "../assets/android-chrome-192x192.png"
 import FAQ from '@/components/FAQ';
+
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -212,7 +211,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-green-600">
+      <section className="bg-green-600 mb-16">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">Ready to get started?</span>

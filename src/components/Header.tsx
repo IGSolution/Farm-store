@@ -1,15 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Leaf, Users, Target, Heart } from "lucide-react";
 import { MobileNav } from "@/components/MobileNav";
-import { SocialIcons } from "@/components/SocialIcons";
 import logo from "../assets/android-chrome-192x192.png";
 
 export default function Header () {

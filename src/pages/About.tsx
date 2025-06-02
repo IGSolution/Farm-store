@@ -1,18 +1,14 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Leaf, Users, Target, Heart } from "lucide-react";
-import { MobileNav } from "@/components/MobileNav";
-import { SocialIcons } from "@/components/SocialIcons";
+import { Target, Heart } from "lucide-react";
 import image1 from "../assets/image.png";
 import image2 from "../assets/image1.png";
-import logo from "../assets/android-chrome-192x192.png";
 import FAQ from "@/components/FAQ";
 
 const About = () => {
@@ -130,7 +126,7 @@ const About = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Join Our Growing Community
           </h3>
@@ -153,6 +149,7 @@ const About = () => {
         </div>
 
         <FAQ/>
+
       </main>
 
     </div>
