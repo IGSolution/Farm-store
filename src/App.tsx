@@ -18,6 +18,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import MainLayout from "@/components/layouts/MainLayout"; // import the new layout
 
 const queryClient = new QueryClient();
 
@@ -39,24 +40,29 @@ function AppRoutes() {
       <Route path="/payment-success" element={<PaymentSuccess />} />
       
       {/* Public routes */}
-      <Route path="/marketplace" element={<Marketplace />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/contact" element={<Contact />} />
-      
-      {/* Redirect based on user status */}
       <Route path="/" element={
-        user ? (
-          profile?.is_verified ? (
-            profile.role === 'farmer' ? 
-              <Navigate to="/dashboard" replace /> : 
-              <Navigate to="/marketplace" replace />
-          ) : (
-            <Navigate to="/verify" replace />
-          )
-        ) : (
-          <Index />
-        )
+        <MainLayout>
+          <Routes>
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/" element={
+              user ? (
+                profile?.is_verified ? (
+                  profile.role === 'farmer' ? 
+                    <Navigate to="/dashboard" replace /> : 
+                    <Navigate to="/marketplace" replace />
+                ) : (
+                  <Navigate to="/verify" replace />
+                )
+              ) : (
+                <Index />
+              )
+            } />
+          </Routes>
+        </MainLayout>
       } />
       
       <Route path="/dashboard" element={
