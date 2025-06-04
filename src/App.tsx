@@ -38,8 +38,7 @@ function AppRoutes() {
       <Route path="/auth" element={<Auth />} />
       <Route path="/verify" element={<Verify />} />
       <Route path="/payment-success" element={<PaymentSuccess />} />
-      
-      <Route path="/marketplace" element={<Marketplace />} />
+
 
       <Route element={<MainLayout />}>
         <Route path="/about" element={<About />} />
@@ -49,8 +48,8 @@ function AppRoutes() {
         <Route path="/" element={
           user ? (
             profile?.is_verified ? (
-              profile.role === 'farmer' ? 
-                <Navigate to="/dashboard" replace /> : 
+              profile.role === 'farmer' ?
+                <Navigate to="/dashboard" replace /> :
                 <Navigate to="/marketplace" replace />
             ) : (
               <Navigate to="/verify" replace />
@@ -60,15 +59,19 @@ function AppRoutes() {
           )
         } />
       </Route>
-      
+
       <Route path="/dashboard" element={
         <ProtectedRoute allowedRoles={['farmer']}>
           <Dashboard />
         </ProtectedRoute>
       } />
-      
+
+      <Route path="/marketplace" element={
+        <Marketplace />
+      } />
+
       <Route path="/cart" element={<Cart />} />
-      
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
